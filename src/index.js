@@ -16,6 +16,8 @@ app.set('views', path.join(__dirname, 'views') );
 app.use(require('./routes/'));
 
 // Static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Listening the server
 app.listen(
