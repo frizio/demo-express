@@ -17,7 +17,7 @@ app.get(
     (req, res) => {
         console.log('Path hit');
         // res.sendFile(path.join(__dirname, '/views/index.html'));
-        res.render('index');
+        res.render('index', {'title': 'Demo Node Website'});
     }
 );
 
