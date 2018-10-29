@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 
@@ -11,7 +12,8 @@ const port = app.get('port');
 app.get(
     '/',
     (req, res) => {
-        res.send('Hello from the demo server');
+        console.log('Path hit');
+        res.sendFile(path.join(__dirname, '/views/index.html'));
     }
 );
 
