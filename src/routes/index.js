@@ -5,7 +5,7 @@ router.get(
     '/',
     (req, res) => {
         console.log('Path root hit');
-        res.render('index', {'title': 'Demo Node Website'});
+        res.render('index.html', {'title': 'Demo Node Website'});
     }
 );
 
@@ -13,7 +13,7 @@ router.get(
     '/contact',
     (req, res) => {
         console.log('Path contact hit');
-        res.render('contact', {'title': 'Contact Page'});
+        res.render('contact.html', {'title': 'Contact Page'});
     }
 );
 

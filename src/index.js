@@ -5,6 +5,7 @@ const app = express();
 // Settings
 app.set('port', 3000);
 const port = app.get('port');
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views') );
 
