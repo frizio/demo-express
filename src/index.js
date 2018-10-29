@@ -8,6 +8,12 @@ const port = app.get('port');
 // Middlewares
 
 // Routes
+app.get(
+    '/',
+    (req, res) => {
+        res.send('Hello from the demo server');
+    }
+);
 
 // Static files
 
