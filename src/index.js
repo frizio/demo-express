@@ -5,6 +5,9 @@ const app = express();
 // Settings
 app.set('port', 3000);
 const port = app.get('port');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views') );
+
 
 // Middlewares
 
@@ -13,7 +16,8 @@ app.get(
     '/',
     (req, res) => {
         console.log('Path hit');
-        res.sendFile(path.join(__dirname, '/views/index.html'));
+        // res.sendFile(path.join(__dirname, '/views/index.html'));
+        res.render('index');
     }
 );
 
