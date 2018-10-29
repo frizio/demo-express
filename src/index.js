@@ -12,14 +12,7 @@ app.set('views', path.join(__dirname, 'views') );
 // Middlewares
 
 // Routes
-app.get(
-    '/',
-    (req, res) => {
-        console.log('Path hit');
-        // res.sendFile(path.join(__dirname, '/views/index.html'));
-        res.render('index', {'title': 'Demo Node Website'});
-    }
-);
+app.use(require('./routes/'));
 
 // Static files
 
